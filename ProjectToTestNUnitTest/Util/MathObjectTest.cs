@@ -22,7 +22,7 @@ namespace ProjectToTestNUnitTest.Util
             var mathObject = new MathObject();
             int expectedResult = 3 + 1;
             int calculatedResult = mathObject.AddTwoInts(3, 4);
-            Assert.AreEqual(calculatedResult, expectedResult, String.Format("The expected result was {0}", expectedResult));
+            Assert.AreEqual(calculatedResult, expectedResult, String.Format("The expected result is {0}", expectedResult));
         }
     }
 }
