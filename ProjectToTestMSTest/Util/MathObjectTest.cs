@@ -1,19 +1,15 @@
-﻿using ProjectToTest.Service;
+﻿using ProjectToTest.Util;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using ProjectToTest.Domain;
-using System.Collections.Generic;
 
-namespace ProjectToTestMSTest
+namespace ProjectToTestMSTest.Util
 {
-    
-    
     /// <summary>
-    ///This is a test class for IPersonRepositoryTest and is intended
-    ///to contain all IPersonRepositoryTest Unit Tests
+    ///This is a test class for MathObjectTest and is intended
+    ///to contain all MathObjectTest Unit Tests
     ///</summary>
     [TestClass()]
-    public class IPersonRepositoryTest
+    public class MathObjectTest
     {
 
 
@@ -66,40 +62,36 @@ namespace ProjectToTestMSTest
         #endregion
 
 
-        internal virtual IPersonRepository CreateIPersonRepository()
+        /// <summary>
+        ///A test for MathObject Constructor
+        ///</summary>
+        [TestMethod()]
+        public void MathObjectConstructorTest()
         {
-            // TODO: Instantiate an appropriate concrete class.
-            IPersonRepository target = null;
-            return target;
+            try
+            {
+                MathObject target = new MathObject();
+            }
+            catch (Exception ex)
+            {
+                Assert.IsTrue(false, String.Format("Exception({0}) occurss when the 'MathObject' class is intantiated.",
+                    ex.GetType()));
+            }
         }
 
         /// <summary>
-        ///A test for GetPeople
+        ///A test for AddTwoInts
         ///</summary>
         [TestMethod()]
-        public void GetPeopleTest()
+        public void AddTwoIntsTest()
         {
-            IPersonRepository target = CreateIPersonRepository();
-            List<Person> expected = null;
-            List<Person> actual;
-            actual = target.GetPeople();
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
-        }
-
-        /// <summary>
-        ///A test for GetPersonById
-        ///</summary>
-        [TestMethod()]
-        public void GetPersonByIdTest()
-        {
-            IPersonRepository target = CreateIPersonRepository(); // TODO: Initialize to an appropriate value
-            int personId = 0; // TODO: Initialize to an appropriate value
-            Person expected = null; // TODO: Initialize to an appropriate value
-            Person actual;
-            actual = target.GetPersonById(personId);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            MathObject target = new MathObject();
+            int num1 = 2;
+            int num2 = 3;
+            int expected = num1 + num2;
+            int actual;
+            actual = target.AddTwoInts(num1, num2);
+            Assert.AreEqual(expected, actual, "Expected and calculated value are diferent.");
         }
     }
 }

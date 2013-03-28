@@ -14,12 +14,12 @@ namespace ProjectToTest.Domain
         {
             if (first == null)
             {
-                throw new ArgumentNullException("The first parameter is null");
+                throw new ArgumentNullException("The 'first' parameter is null");
             }
 
             if (second == null)
             {
-                throw new ArgumentNullException("The second parameter is null");
+                throw new ArgumentNullException("The 'second' parameter is null");
             }
 
             this.first = first;

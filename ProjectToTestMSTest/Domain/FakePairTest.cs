@@ -1,10 +1,10 @@
-﻿using ProjectToTest.Domain;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using ProjectToTest.Domain;
 
 //namespace ProjectToTestMSTest
 
-namespace ProjectToTest.Domain
+namespace ProjectToTestMSTest.Domain
 {
     
     

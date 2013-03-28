@@ -35,6 +35,9 @@
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="NSubstitute">
+      <HintPath>Lib\NSubstitute.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -50,11 +53,10 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FakePairTest.cs" />
-    <Compile Include="IPersonRepositoryTest.cs" />
-    <Compile Include="MathObjectTest.cs" />
-    <Compile Include="PersonServiceTest.cs" />
-    <Compile Include="PersonTest.cs" />
+    <Compile Include="Domain\FakePairTest.cs" />
+    <Compile Include="Util\MathObjectTest.cs" />
+    <Compile Include="Service\PersonServiceTest.cs" />
+    <Compile Include="Domain\PersonTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -62,6 +64,9 @@
       <Project>{160C3AD3-4DBC-4AC7-9C76-082ECD430058}</Project>
       <Name>ProjectToTest</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Lib\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
